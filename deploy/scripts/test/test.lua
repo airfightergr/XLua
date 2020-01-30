@@ -192,6 +192,9 @@ c = replace_command("sim/operation/pause_toggle",function(phase)
 end)
 --]]
 
+log("test log")
+print(path())
+
 print(c)
 
 c2 = create_command("lua/my_pause","pause from lua",function(phase)

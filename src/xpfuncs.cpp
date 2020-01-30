@@ -16,10 +16,16 @@
 #include "xpcommands.h"
 #include "xptimers.h"
 #include "module.h"
+#include "XPLMUtilities.h"
+#include "XPLMPlanes.h"
 
 #include <string.h>
 #include <stdio.h>
 #include <assert.h>
+
+
+
+
 
 /*
 	TODO: figure out when we have to resync our datarefs
@@ -426,6 +432,30 @@ static int XLuaIsTimerScheduled(lua_State * L)
 	return 1;
 }
 
+//----------------------------------------------------------------
+// CUSTOM
+//----------------------------------------------------------------
+
+static int XLuaDebugString(lua_State* L)
+{
+	const char* contents = lua_tostring(L, 1);
+
+
+	XPLMDebugString(contents);
+	
+	return 1;
+}
+
+static int XLuaReturnPath(lua_State* L)
+{
+	char fileName[256];
+	char filePath[512];
+
+	XPLMGetNthAircraftModel(0, fileName, filePath);
+
+	lua_pushstring(L, filePath);
+	return 1;
+}
 
 
 #define FUNC_LIST \
@@ -448,7 +478,9 @@ static int XLuaIsTimerScheduled(lua_State * L)
 	FUNC(XLuaCommandOnce) \
 	FUNC(XLuaCreateTimer) \
 	FUNC(XLuaRunTimer) \
-	FUNC(XLuaIsTimerScheduled)
+	FUNC(XLuaIsTimerScheduled) \
+	FUNC(XLuaDebugString) \
+	FUNC(XLuaReturnPath)
 
 
 void	add_xpfuncs_to_interp(lua_State * L)

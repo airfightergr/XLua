@@ -278,6 +278,20 @@ function run_after_time(func,delay)
 end
 
 --------------------------------------------------------------------------------
+-- CUSTOM UTILITIES
+--------------------------------------------------------------------------------
+
+function log(contents)
+	c = XLuaDebugString(contents.."\n")
+end
+
+function path()
+	return string.sub(XLuaReturnPath(), 0, -12)
+end
+
+
+
+--------------------------------------------------------------------------------
 -- NAMESPACE UTILITIES
 --------------------------------------------------------------------------------
 -- These put all script actions in a private namespace with meta-table 
