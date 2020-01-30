@@ -11,6 +11,10 @@ XLua is **not** meant to be an "official" Lua plugin for X-Plane, and it definit
 
 Release Notes
 -----------------
+1.0.2r1 - 1/30/2020
+* Librain implementation example (Laminar's C400)
+
+
 1.1.0r1 - 1/29/2020
  * Support to get aircraft path using "path()" - removes [aircraft].acf from the end.
  * Supports log (XPLMDebugString) to Log.txt.
