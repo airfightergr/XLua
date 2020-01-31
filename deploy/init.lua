@@ -287,8 +287,13 @@ end
 
 function path()
 
-	return XLuaReturnPath()
-	
+	lastSlashPos = string.find(XLuaReturnPath(), "/[^/]*$")		-- find the position of last slash
+	lastCharPos = lastSlashPos - string.len(XLuaReturnPath()) - 1   	-- Calculate the number from the end for the string.sub
+
+	acfFolder	= string.sub( XLuaReturnPath(), 0, lastCharPos )
+
+	return acfFolder
+
 end
 
 

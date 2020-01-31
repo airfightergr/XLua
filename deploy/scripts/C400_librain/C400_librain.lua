@@ -1,8 +1,8 @@
-
--- IMPLEMENTATION OF LIBRAIN VIA XLUA
--- ILIAS TSELIOS
--- 30 Jan 2020
-
+--[[*********************************************
+* 	IMPLEMENTATION OF LIBRAIN VIA XLUA			*
+*	BY ILIAS TSELIOS							*
+* 	30 Jan 2020									*
+*************************************************]]
 
 ----------------------------------- LOCATE DATAREFS OR COMMANDS -----------------------------------
 rain_verbose                = find_dataref("librain/verbose")
@@ -106,12 +106,8 @@ rain_init                   = find_dataref("librain/initialize")
 --------------------------------- DO THIS EACH FLIGHT START ---------------------------------
 function flight_start()
 
-	lastSlashPos = string.find(path(), "/[^/]*$")	-- find the position of last slash
-	lastCharPos = lastSlashPos - string.len(path()) - 1   	-- Calculate the number from the end for the string.sub
-	
-	acfFolder	= string.sub( path(), 0, lastCharPos )
-	
-	
+	log("[C400]: " .. path())   -- write in the log.txt the path for debugging
+
 	librain_path    				= acfFolder .. "/objects/"
 	mask_path						= acfFolder .. "/objects/"		
 	
