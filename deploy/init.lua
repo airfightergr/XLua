@@ -287,8 +287,16 @@ end
 
 function path()
 
-	lastSlashPos = string.find(XLuaReturnPath(), "/[^/]*$")		-- find the position of last slash
-	lastCharPos = lastSlashPos - string.len(XLuaReturnPath()) - 1   	-- Calculate the number from the end for the string.sub
+	--[[Since the XLuaReturnPath() returns the full path down to .acf,
+		we use the string.find to get the position of the slash.
+		Then, we calculate in what position from the end is the slash,
+		to be passed as 3rd argument in the string.sub().
+		That give us the clean path down the last "/", for example:
+		C:\X-Plane 11/Aircraft/Extra Aircraft/Columbia 400/
+	]]
+
+	lastSlashPos = string.find(XLuaReturnPath(), "/[^/]*$")
+	lastCharPos = lastSlashPos - string.len(XLuaReturnPath()) - 1
 
 	acfFolder	= string.sub( XLuaReturnPath(), 0, lastCharPos )
 
