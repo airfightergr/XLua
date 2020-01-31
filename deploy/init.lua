@@ -286,7 +286,7 @@ function log(contents)
 end
 
 function path()
-	return string.sub(XLuaReturnPath(), 0, -12)
+	return XLuaReturnPath()
 end
 
 
