@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d9c3242d-66e2-4d8f-86cc-84e86cf595f3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy/init.lua" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/init.lua" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,8 +20,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/deploy/init.lua">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="394">
-              <caret line="295" column="6" selection-start-line="295" selection-start-column="6" selection-end-line="295" selection-end-column="6" />
+            <state relative-caret-position="417">
+              <caret line="296" selection-start-line="296" selection-end-line="296" />
             </state>
           </provider>
         </entry>
@@ -141,14 +140,21 @@
       <option name="project" value="LOCAL" />
       <updated>1580461123101</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added detailed comments in init.lua, path()">
+      <created>1580461573731</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1580461573731</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1927" y="-7" width="1550" height="848" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25670242" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2600536" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -180,7 +186,8 @@
     <MESSAGE value="Fix path and add a librain example for Laminar's C400" />
     <MESSAGE value="Updated Readme.md for 1.0.2r1" />
     <MESSAGE value="Move the folder capture code to init.lua" />
-    <option name="LAST_COMMIT_MESSAGE" value="Move the folder capture code to init.lua" />
+    <MESSAGE value="Added detailed comments in init.lua, path()" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added detailed comments in init.lua, path()" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/README.md">
@@ -193,17 +200,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/deploy/init.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="417">
+          <caret line="296" selection-start-line="296" selection-end-line="296" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/deploy/scripts/C400_librain/C400_librain.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2507">
           <caret line="109" selection-start-line="109" selection-end-line="109" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/deploy/init.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="295" column="6" selection-start-line="295" selection-start-column="6" selection-end-line="295" selection-end-column="6" />
         </state>
       </provider>
     </entry>
